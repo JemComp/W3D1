@@ -21,6 +21,14 @@ class Array
         return result
     end
 
-    
+    def my_reject(blc)
+        result = []
+        self.my_each do |elem|
+            if !blc.call(elem)
+                result << elem
+            end
+        end
+        return result
+    end
 
 end
